@@ -8,7 +8,9 @@ export const path = {
 	src: {
 		static: `${srcFolder}/assets/static/**/*.*`,
 	},
-	watch: {},
+	watch: {
+		static: `${srcFolder}/assets/static/**/*.*`,
+	},
 	clean: buildFolder,
 	buildFolder,
 	srcFolder,
