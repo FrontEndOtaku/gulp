@@ -21,7 +21,7 @@ export const html = () => {
 					verbose: true, //Показывать в терминале какой файл обработан
 				})
 			)
-			.pipe(replace(/@img\//g, "./assets/image/"))
+			.pipe(replace(/@img\//g, "./assets/images/"))
 			.pipe(htmlWebp())
 			.pipe(
 				versionNumber({
