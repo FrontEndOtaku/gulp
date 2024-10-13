@@ -13,13 +13,14 @@ import { styles } from "./gulp/tasks/styles.js";
 import { svg } from "./gulp/tasks/svg.js";
 import { watching } from "./gulp/tasks/watching.js";
 
+export const isBuild = process.argv.includes("--build");
+
 const fonts = series(otfToTtf, ttfToWoff);
 
-const dev = series(
-	clean,
-	fonts,
-	parallel(copy, html, styles, scripts, images, svg),
-	parallel(watching, server)
-);
+const mainTasks = parallel(fonts, copy, html, styles, scripts, images, svg);
+
+const dev = series(clean, mainTasks, parallel(watching, server));
+
+export const build = series(clean, mainTasks);
 
 task("default", dev);
