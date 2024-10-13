@@ -9,6 +9,7 @@ export const path = {
 		scss: `${buildFolder}/css/`,
 		scripts: `${buildFolder}/scripts/`,
 		images: `${buildFolder}/assets/images/`,
+		fonts: `${buildFolder}/assets/fonts/`,
 	},
 	src: {
 		static: `${srcFolder}/assets/static/**/*.*`,
@@ -18,6 +19,8 @@ export const path = {
 		scripts: `${srcFolder}/scripts/app.js`,
 		images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp}`,
 		svg: `${srcFolder}/assets/images/**/*.svg`,
+		fontsOtf: `${srcFolder}/assets/fonts/*.otf`,
+		fontsTtf: `${srcFolder}/assets/fonts/*.ttf`,
 	},
 	watch: {
 		static: `${srcFolder}/assets/static/**/*.*`,
